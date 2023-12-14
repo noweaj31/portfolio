@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+.check_input {
+  appearance: none;
+}
+
+.check_input:checked {
+  
+}
+
+.check_input:checked::after {
+  content:'';
+}

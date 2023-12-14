@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+@import "../font/Nanum_Myeongjo/";
+@import "../font/noto-sans-kr/notosans.css";
+@import "../font/roboto/roboto.css";
+
+html,
+body {
+  font-family: "Roboto", "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+    avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu,
+    roboto, noto, arial, sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
