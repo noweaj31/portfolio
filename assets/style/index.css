@@ -1175,6 +1175,44 @@ body {
   font-size: 1.8rem;
   margin-top: 2rem;
 }
+@media screen and (max-width: 849px) {
+  .contact-container .contact-header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-main .contact-main-wrap a span {
+    font-size: 4rem;
+  }
+  .contact-main .contact-main-wrap .greeting-text {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+  }
+  .contact-main .contact-main-wrap .last-text {
+    font-size: 1.6rem;
+    margin-top: 1.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-container {
+    padding: 9rem 3rem;
+  }
+  .contact-container .contact-header h1 {
+    font-size: 11rem;
+  }
+  .contact-main .contact-main-wrap a span {
+    font-size: 3rem;
+  }
+  .contact-main .contact-main-wrap .greeting-text {
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+  }
+  .contact-main .contact-main-wrap .last-text {
+    font-size: 1.2rem;
+    margin-top: 1.3rem;
+  }
+}
 /* btn-wrap */
 .btn-wrap {
   position: fixed;
