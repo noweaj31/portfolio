@@ -128,18 +128,20 @@ body {
   width: 100%;
   height: 100%;
 }
-.intro-wrap button {
+.intro-wrap .intro-area .arrow-btn {
   position: absolute;
   bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
+  transition: 0.3s;
+}
+.intro-wrap button {
   width: 6rem;
   height: 6rem;
   border: 2px solid #000;
   border-radius: 50%;
-  transition: 0.3s;
 }
-.intro-wrap button:hover {
+.intro-wrap .arrow-btn:hover {
   position: absolute;
   bottom: 5rem;
   left: 50%;
@@ -225,7 +227,7 @@ body {
 }
 .about-wrap .about-area .img-slider-carousel .img-slider {
   width: 100%;
-  box-shadow: 1rem 1rem rgb(255, 255, 255);
+  box-shadow: 0.5rem 0.5rem rgb(255, 255, 255);
 }
 .about-wrap .about-area .img-slider-carousel .img-slider .img-list {
   display: flex;
@@ -636,6 +638,7 @@ body {
   margin-top: 1.5rem;
   opacity: 0;
   transition: 0.3s ease;
+  z-index: 10 !important;
 }
 .project-wrap .project-area .project-img .text-wrap .text-area {
   display: flex;
@@ -717,12 +720,13 @@ body {
   transition: box-shadow 300ms ease-in-out;
 }
 .project-box .img-wrap:hover {
-  box-shadow: 0 0 1rem #ffbecf;
+  box-shadow: 0.5rem 0.5rem #ff94b1;
 }
 .netflix .project-box:hover > .text-wrap {
   opacity: 1;
   transition: 0.3s ease;
 }
+
 .netflix img {
   transform: scale(1);
   transition: 0.3s ease;
@@ -1064,6 +1068,113 @@ body {
   font-size: 3rem;
 }
 
+.keyword-wrap {
+  padding: 5rem 0;
+  width: 100%;
+  position: relative;
+  display: block;
+  transition: opacity 1s;
+}
+.keyword-wrap .keyword-area {
+  width: 100%;
+  position: relative;
+  max-width: 192rem;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 45rem;
+}
+.keyword-wrap .keyword-area::before {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+}
+.keyword-wrap .keyword-area::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0));
+}
+.keyword-wrap .keyword-area .keyword-box {
+  display: flex;
+  align-items: center;
+  height: 15rem;
+  gap: 4rem;
+  will-change: transform;
+  animation: moveLeft 15s infinite linear;
+}
+.keyword-wrap .keyword-area .keyword-box .keyword {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.keyword-wrap .keyword-area .keyword-box .keyword .img-wrap {
+  width: 20rem;
+  height: 10rem;
+  min-width: 20rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.keyword-wrap .keyword-area .keyword-box .keyword .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contact-main {
+  padding: 0 11rem 11rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-main .contact-main-wrap {
+  text-align: center;
+}
+.contact-main .contact-main-wrap .greeting-text {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+.contact-main .contact-main-wrap a {
+  position: relative;
+}
+.contact-main .contact-main-wrap a span {
+  font-size: 4.8rem;
+  font-weight: 900;
+  margin: 1.2rem auto 2.4rem;
+  padding-bottom: 0.8rem;
+}
+.contact-main .contact-main-wrap a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #f7c749;
+  top: 0;
+  left: 0;
+  transition: width 300ms ease-in-out;
+  z-index: -10;
+}
+.contact-main .contact-main-wrap a:hover::before {
+  width: 100%;
+}
+.contact-main .contact-main-wrap .last-text {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
 /* btn-wrap */
 .btn-wrap {
   position: fixed;
@@ -1093,6 +1204,9 @@ body {
 }
 .btn-wrap .study-btn .github-logo img {
   transform: scale(1.5);
+}
+.btn-wrap .study-btn .notion-logo img {
+  transform: scale(1.1);
 }
 
 /* side-menu */
