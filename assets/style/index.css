@@ -462,12 +462,16 @@ body {
   flex-grow: 1;
   flex-shrink: 1;
   padding-right: 6rem;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 .technical-stack-wrap .technical-stack-area .icon-animation .icon-bg {
   width: 12rem;
   height: 12rem;
 }
-
+.technical-stack-wrap .technical-stack-area .text-wrap {
+  z-index: 1;
+}
 .technical-stack-wrap .technical-stack-area .text-wrap h4 {
   display: flex;
   align-items: baseline;
@@ -489,7 +493,7 @@ body {
 .technical-stack-wrap .technical-stack-area .text-wrap .lisence .lisence-item {
   display: flex;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 1.4vw, 1.8rem);
   color: #ddd;
 }
 .technical-stack-wrap
@@ -529,7 +533,7 @@ body {
 }
 
 .technical-stack-wrap .technical-stack-area .text-wrap .career .company-name {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 1.4vw, 1.8rem);
 }
 .technical-stack-wrap
   .technical-stack-area
@@ -538,17 +542,18 @@ body {
   li
   .company-date {
   margin-left: 0.5rem;
+  font-size: clamp(1.5rem, 1.4vw, 1.7rem);
 }
 .stack {
   margin-top: 3rem;
 }
 .stack .stack-list {
-  font-size: 1.8rem;
   color: #ddd;
 }
 .stack .stack-list .stack-item {
   display: flex;
   align-items: center;
+  font-size: clamp(1.6rem, 1.4vw, 1.8rem);
 }
 .stack .stack-list .stack-item img {
   width: 1rem;
@@ -569,6 +574,13 @@ body {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+  }
+  .technical-stack-wrap .technical-stack-area .icon-animation {
+    width: 100%;
+    padding-right: 0;
+  }
+  .technical-stack-wrap .technical-stack-area .text-wrap {
+    margin-top: 4.8rem;
   }
   .technical-stack-wrap
     .technical-stack-area
@@ -1180,8 +1192,15 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .contact-wrap .contact-area p {
+    font-size: 9rem;
+  }
 }
 @media screen and (max-width: 767px) {
+  .contact-wrap {
+    padding: 7rem 3rem;
+    height: auto;
+  }
   .contact-main .contact-main-wrap a span {
     font-size: 4rem;
   }
@@ -1193,13 +1212,25 @@ body {
     font-size: 1.6rem;
     margin-top: 1.6rem;
   }
+  .contact-wrap .contact-area p {
+    margin-bottom: 4rem;
+  }
 }
+@media screen and (max-width: 694px) {
+  .contact-wrap .contact-area p {
+    font-size: 7rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .contact-container {
     padding: 9rem 3rem;
   }
   .contact-container .contact-header h1 {
     font-size: 11rem;
+  }
+  .contact-wrap .contact-area p {
+    font-size: 5rem;
   }
   .contact-main .contact-main-wrap a span {
     font-size: 3rem;
@@ -1211,6 +1242,12 @@ body {
   .contact-main .contact-main-wrap .last-text {
     font-size: 1.2rem;
     margin-top: 1.3rem;
+  }
+  .contact-wrap .contact-area .contact-btn {
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    margin-top: 0.3rem;
+    display: block;
   }
 }
 /* btn-wrap */
@@ -1236,15 +1273,27 @@ body {
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
-
   overflow: hidden;
   box-shadow: 0px 2px 6px rgba(141, 139, 139, 0.334);
+  transition: opacity 300ms ease-in-out;
+}
+.btn-wrap .study-btn button:hover {
+  opacity: 0.7;
 }
 .btn-wrap .study-btn .github-logo img {
   transform: scale(1.5);
 }
 .btn-wrap .study-btn .notion-logo img {
   transform: scale(1.1);
+}
+@media screen and (max-width: 480px) {
+  .btn-wrap .study-btn button + button {
+    margin-top: 1rem;
+  }
+  .btn-wrap .study-btn button {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 /* side-menu */
