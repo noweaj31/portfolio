@@ -15,3 +15,10 @@ function scrollToAbout() {
 }
 
 arrowDownBtn.addEventListener("click", scrollToAbout);
+
+const bottomWrap = document.querySelector(".bottom-wrap");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 50) bottomWrap.style.bottom = "0px";
+  if (window.scrollY <= 50) bottomWrap.style.bottom = "-70px";
+});

@@ -128,6 +128,14 @@ body {
   width: 100%;
   height: 100%;
 }
+.intro-wrap .intro-area .ani-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10rem;
+  color: #000;
+}
 .intro-wrap .intro-area .arrow-btn {
   position: absolute;
   bottom: 4rem;
@@ -1286,13 +1294,56 @@ body {
 .btn-wrap .study-btn .notion-logo img {
   transform: scale(1.1);
 }
-@media screen and (max-width: 480px) {
-  .btn-wrap .study-btn button + button {
-    margin-top: 1rem;
+.bottom-wrap {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .btn-wrap {
+    display: none;
   }
-  .btn-wrap .study-btn button {
-    width: 3rem;
-    height: 3rem;
+  .bottom-wrap {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    height: 7rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #20202073;
+    transition: all 300ms ease-in-out;
+    background-color: #fff;
+  }
+  .bottom-wrap .study-btn-wrap {
+    display: flex;
+    width: 100%;
+  }
+  .bottom-wrap .study-btn-wrap button {
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 300ms ease-in-out;
+  }
+  .bottom-wrap .study-btn-wrap button:hover {
+    opacity: 0.5;
+  }
+  .bottom-wrap .study-btn-wrap button img {
+    height: 7rem;
+  }
+  .velog-ic {
+    background-color: #20c997;
+  }
+  .github-ic {
+    background-color: #1b1f23;
+  }
+  .notion-ic {
+    background-color: #fff;
+  }
+  .bottom-wrap .study-btn-wrap button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -1444,4 +1495,9 @@ footer {
 }
 .footer-wrap .copyright {
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  footer {
+    margin-bottom: 7rem;
+  }
 }
