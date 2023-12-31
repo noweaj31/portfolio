@@ -1,0 +1,81 @@
+@charset 'UTF-8';
+
+[data-ani-delay="80"] {
+  -webkit-animation-delay: 80ms;
+  animation-delay: 80ms;
+}
+
+[data-ani-delay="100"] {
+  -webkit-animation-delay: 100ms;
+  animation-delay: 100ms;
+}
+
+[data-ani-delay="160"] {
+  -webkit-animation-delay: 160ms;
+  animation-delay: 160ms;
+}
+
+[data-ani-delay="200"] {
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+
+[data-ani-delay="240"] {
+  -webkit-animation-delay: 240ms;
+  animation-delay: 240ms;
+}
+
+[data-ani-delay="400"] {
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+}
+
+[data-ani-delay="500"] {
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+}
+
+[data-ani-delay="550"] {
+  -webkit-animation-delay: 550ms;
+  animation-delay: 550ms;
+}
+
+[data-ani-delay="600"] {
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+}
+
+[data-ani-delay="700"] {
+  -webkit-animation-delay: 700ms;
+  animation-delay: 700ms;
+}
+
+[data-ani-delay="800"] {
+  -webkit-animation-delay: 800ms;
+  animation-delay: 800ms;
+}
+
+[data-ani-delay="900"] {
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+
+[data-ani-delay="1000"] {
+  -webkit-animation-delay: 1000ms;
+  animation-delay: 1000ms;
+}
+
+[data-ani-delay="1100"] {
+  -webkit-animation-delay: 1100ms;
+  animation-delay: 1100ms;
+}
+
+[data-ani-delay="1200"] {
+  -webkit-animation-delay: 1200ms;
+  animation-delay: 1200ms;
+}
+
+[data-ani-delay="1800"] {
+  -webkit-animation-delay: 1800ms;
+  animation-delay: 1800ms;
+}
