@@ -27,9 +27,10 @@
           </h1>
         </a>
         <div class="right-menu">
-          <p class="time">
-            <span>2023</span>년 <span>12</span>월 <span>20</span>일
-            <span>00:00</span>
+          <p id="clock" class="time">
+            <span class="year"></span><span class="month"></span>
+            <span class="date"></span><span class="hours"></span>
+            <span class="minutes"></span><span class="seconds"></span>
           </p>
           <button class="gnb-btn">
             <span></span>
@@ -48,6 +49,7 @@
             <h2 data-ani-fade-in="play" data-ani-delay="1200">yourself.</h2>
           </div>
           <div class="arrow-btn" aria-labelledby="about">
+            <span>click!</span>
             <button><i class="fa-solid fa-arrow-down"></i></button>
           </div>
         </div>
@@ -294,7 +296,7 @@
                     </div>
                     <div class="view-btn">
                       <a
-                        href="../streaming/assets/page/index.html"
+                        href="https://noweaj31.github.io/streaming/"
                         target="_blank"
                         >View more</a
                       >
@@ -315,12 +317,21 @@
                         />반응형 HTML CSS JS JQUERY
                       </p>
                       <p class="info">
-                        메인, 서브(로그인, 회원가입, 상세페이지)
+                        메인, 서브(로그인, 회원가입, 쇼핑페이지)
                       </p>
                     </div>
                     <div class="view-btn">
-                      <a href="../ohouse/index.html" target="_blank"
+                      <a
+                        href="https://noweaj31.github.io/ohouse/"
+                        target="_blank"
                         >View more</a
+                      >
+                    </div>
+                    <div class="view-btn">
+                      <a
+                        href="https://noweaj31.github.io/ohouse/page/auth/detail-page.html"
+                        target="_blank"
+                        >Detail page</a
                       >
                     </div>
                   </div>
@@ -360,7 +371,11 @@
                       <p class="info">메인 페이지</p>
                     </div>
                     <div class="view-btn">
-                      <a>View more</a>
+                      <a
+                        href="https://noweaj31.github.io/iqos-clone/"
+                        target="_blank"
+                        >View more</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -626,8 +641,8 @@
         </button>
       </div>
     </div>
-    <div class="">
-      <button></button>
+    <div class="go-to-top-btn">
+      <button><i class="fa-solid fa-arrow-up"></i></button>
     </div>
     <div class="bottom-wrap">
       <div class="study-btn-wrap">
@@ -658,4 +673,21 @@
   <script src="./assets/js/headerScroll.js"></script>
   <script src="./assets/js/contactScroll.js"></script>
   <script src="./assets/js/scroll.js"></script>
+  <script src="./assets/js/scrollBtn.js"></script>
+  <script src="./assets/js/today.js"></script>
+  <script>
+    const about = document.querySelector(".about");
+    const options = { root: null, threshold: 0.38, rootMargin: "-300px 0px" };
+    const test = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
+        console.log("Intersection ratio: ", entry.intersectionRatio);
+        if (entry.intersectionRatio > 0.3) {
+          about.setAttribute("data-ani-fade-in", "play");
+        }
+      });
+    }, options);
+
+    test.observe(about);
+  </script>
 </html>

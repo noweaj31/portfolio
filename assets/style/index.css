@@ -30,6 +30,7 @@ body {
   align-items: center;
 }
 .head-wrap .right-menu .time {
+  width: 19.3rem;
   margin-top: 0.4rem;
   margin-right: 2rem;
   font-size: 2rem;
@@ -140,19 +141,22 @@ body {
   color: #000;
   gap: 2rem;
 }
-.intro-wrap .intro-area .ani-text h2:nth-of-type(1) {
-}
-.intro-wrap .intro-area .ani-text h2:nth-of-type(2) {
-}
+
 .intro-wrap .intro-area .ani-text h2:nth-of-type(3) {
   color: #f7c749;
 }
 .intro-wrap .intro-area .arrow-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
   transition: 0.3s;
+}
+.intro-wrap .intro-area .arrow-btn span {
+  color: #000;
 }
 .intro-wrap button {
   width: 6rem;
@@ -169,6 +173,16 @@ body {
 .intro-wrap button i {
   color: #000;
   font-size: 3rem;
+}
+
+@media screen and (max-width: 721px) {
+  .intro-wrap .intro-area .ani-text {
+    flex-direction: column;
+    align-items: center;
+    font-size: 4rem;
+    gap: 0;
+    padding: 0 3rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .intro-wrap button {
@@ -229,9 +243,15 @@ body {
     font-size: 2.9rem;
   }
 }
+@media screen and (max-width: 877px) {
+  .intro-bottom-wrap h4 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .intro-bottom-wrap {
-    padding: 9rem 1rem;
+    padding: 4rem 1rem;
   }
   .intro-bottom-wrap p {
     font-size: 2.4rem;
@@ -813,9 +833,13 @@ body {
   height: 40rem;
   border-radius: 0.4rem;
   overflow: hidden;
-  transition: box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, background-position 5s ease-in-out;
   background-image: url(../image/netflix-mobile.png);
   background-size: cover;
+  background-position: top;
+}
+.netflix .project-box .img-wrap:hover {
+  background-position: bottom;
 }
 .project-box .img-wrap:hover {
   box-shadow: 0.5rem 0.5rem #ff94b1;
@@ -839,9 +863,14 @@ body {
   height: 30rem;
   overflow: hidden;
   border-radius: 0.4rem;
-  transition: box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, background-position 5s ease-in-out;
   background-image: url(../image/ohouse.png);
   background-size: cover;
+  background-position: top;
+}
+
+.ohouse .project-box .img-wrap:hover {
+  background-position: bottom;
 }
 
 .ohouse .project-box:hover > .text-wrap {
@@ -874,11 +903,14 @@ body {
   height: 35rem;
   overflow: hidden;
   border-radius: 0.4rem;
-  transition: box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, background-position 5s ease-in-out;
   background-image: url(../image/millet.png);
   background-size: cover;
+  background-position: top;
 }
-
+.millet .project-box .img-wrap:hover {
+  background-position: bottom;
+}
 .millet .project-box:hover > .text-wrap {
   opacity: 1;
   transition: 0.3s ease;
@@ -895,14 +927,18 @@ body {
   width: 33.3%;
   margin-left: 8rem;
 }
-.iqos .img-wrap {
+.iqos .project-box .img-wrap {
   width: 100%;
   height: 55rem;
   border-radius: 0.4rem;
   overflow: hidden;
-  transition: box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, background-position 5s ease-in-out;
   background-image: url(../image/iqos.png);
   background-size: cover;
+  background-position: top;
+}
+.iqos .project-box .img-wrap:hover {
+  background-position: bottom;
 }
 .iqos .img-wrap .img {
   transition: 0.3s ease;
@@ -939,11 +975,14 @@ body {
   height: 55rem;
   border-radius: 0.4rem;
   overflow: hidden;
-  transition: box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, background-position 5s ease-in-out;
   background-image: url(../image/tamburins.png);
   background-size: cover;
+  background-position: top;
 }
-
+.tamburins .project-box .img-wrap:hover {
+  background-position: bottom;
+}
 .tamburins .project-box:hover > .text-wrap {
   opacity: 1;
   transition: 0.3s ease;
@@ -1021,6 +1060,9 @@ body {
   .millet {
     width: 100%;
     margin-top: 4rem;
+  }
+  .millet .project-box {
+    width: 100%;
   }
   .iqos {
     width: 100%;
@@ -1207,13 +1249,20 @@ body {
   z-index: 1;
   background: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0));
 }
+.keyword-wrap .keyword-area .keyword-box:nth-of-type(1) {
+  -webkit-animation: moveLeft 10s infinite linear;
+  animation: moveLeft 10s infinite linear;
+}
+.keyword-wrap .keyword-area .keyword-box:nth-of-type(2) {
+  -webkit-animation: moveLeft 15s infinite linear;
+  animation: moveLeft 15s infinite linear;
+}
 .keyword-wrap .keyword-area .keyword-box {
   display: flex;
   align-items: center;
   height: 15rem;
   gap: 4rem;
   will-change: transform;
-  animation: moveLeft 15s infinite linear;
 }
 .keyword-wrap .keyword-area .keyword-box .keyword {
   display: flex;
@@ -1222,6 +1271,27 @@ body {
   font-size: 4.8rem;
   font-weight: 700;
   white-space: nowrap;
+}
+@-webkit-keyframes moveLeft {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 }
 .keyword-wrap .keyword-area .keyword-box .keyword .img-wrap {
   width: 20rem;
@@ -1393,7 +1463,7 @@ body {
     height: 7rem;
     box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #20202073;
     transition: all 300ms ease-in-out;
-    background-color: #fff;
+    background-color: #202020;
   }
   .bottom-wrap .study-btn-wrap {
     display: flex;
@@ -1428,7 +1498,55 @@ body {
     align-items: center;
   }
 }
-
+@media screen and (max-width: 480px) {
+  .bottom-wrap {
+    height: 5rem;
+  }
+  .bottom-wrap .study-btn-wrap button img {
+    height: 5rem;
+  }
+}
+/* go-to-top-btn */
+.go-to-top-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  bottom: 4rem;
+  left: 3rem;
+  z-index: 20;
+  transition: opacity 300ms ease-in-out;
+}
+.go-to-top-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 1.5px solid #202020;
+  background-color: #fff;
+}
+.go-to-top-btn button i {
+  font-size: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .go-to-top-btn {
+    bottom: 9rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .go-to-top-btn {
+    bottom: 7rem;
+  }
+  .go-to-top-btn button {
+    width: 4rem;
+    height: 4rem;
+  }
+  .go-to-top-btn button i {
+    font-size: 2rem;
+  }
+}
 /* side-menu */
 
 .side-menu-wrap {
