@@ -30,7 +30,7 @@ body {
   align-items: center;
 }
 .head-wrap .right-menu .time {
-  width: 19.3rem;
+  width: 20rem;
   margin-top: 0.4rem;
   margin-right: 2rem;
   font-size: 2rem;
@@ -1215,7 +1215,6 @@ body {
 .keyword-wrap {
   padding: 5rem 0;
   width: 100%;
-  position: relative;
   display: block;
   transition: opacity 1s;
 }
@@ -1250,19 +1249,21 @@ body {
   background: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0));
 }
 .keyword-wrap .keyword-area .keyword-box:nth-of-type(1) {
-  -webkit-animation: moveLeft 10s infinite linear;
-  animation: moveLeft 10s infinite linear;
+  top: 0;
+  animation: moveLeft 13s infinite linear;
 }
 .keyword-wrap .keyword-area .keyword-box:nth-of-type(2) {
-  -webkit-animation: moveLeft 15s infinite linear;
+  top: 15rem;
   animation: moveLeft 15s infinite linear;
 }
 .keyword-wrap .keyword-area .keyword-box {
+  height: 15rem;
   display: flex;
   align-items: center;
-  height: 15rem;
   gap: 4rem;
+  position: absolute;
   will-change: transform;
+  animation: moveLeft 15s infinite linear;
 }
 .keyword-wrap .keyword-area .keyword-box .keyword {
   display: flex;

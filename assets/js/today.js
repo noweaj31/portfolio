@@ -1,15 +1,4 @@
 "use strict";
-// const Target = document.getElementById("clock");
-// const now = new Date();
-
-// const year = now.getFullYear(".year");
-// const month = now.getMonth(".month") + 1;
-// const date = now.getDate(".date");
-// const hours = now.getHours(".hours");
-// const minutes = now.getMinutes(".minutes");
-// const seconds = now.getSeconds(".seconds");
-
-// console.log(`${year}년 ${month}월 ${date}일 ${hours}:${minutes}`);
 
 const Target = document.getElementById("clock");
 function clock() {
