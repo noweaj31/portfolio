@@ -1,5 +1,8 @@
 @charset 'UTF-8';
 
+body {
+  font-family: "Pretendard-Regular";
+}
 *:not(font, i, b) {
   margin: 0;
   padding: 0;
