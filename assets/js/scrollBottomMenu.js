@@ -5,7 +5,10 @@ const bottomMenu = document.querySelector(".bottom-wrap");
 
 window.addEventListener("scroll", () => {
   let currentScrollY = window.scrollY;
-  if (lastScrollY >= currentScrollY) {
+  if (currentScrollY === 0) {
+    bottomMenu.style.bottom = "-70px";
+  }
+  if (lastScrollY > currentScrollY) {
     bottomMenu.style.bottom = "0";
   }
   if (lastScrollY < currentScrollY) {
