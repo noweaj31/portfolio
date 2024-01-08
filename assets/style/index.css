@@ -192,6 +192,9 @@ body {
     gap: 0;
     padding: 0 3rem;
   }
+  .intro-wrap .intro-area .arrow-btn {
+    bottom: 10rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .intro-wrap button {
@@ -273,6 +276,7 @@ body {
   }
   .intro-bottom-wrap h4 {
     font-size: 1.6rem;
+    line-height: inherit;
   }
   .intro-bottom-wrap p {
     font-size: 1.6rem;
