@@ -2,7 +2,6 @@
 
 let lastScrollY = 0;
 const bottomMenu = document.querySelector(".bottom-wrap");
-console.log(bottomMenu);
 
 window.addEventListener("scroll", () => {
   let currentScrollY = window.scrollY;
