@@ -1509,7 +1509,7 @@ body {
     z-index: 30;
     height: 7rem;
     box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #20202073;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms;
     background-color: #202020;
   }
   .bottom-wrap .study-btn-wrap {
@@ -1562,7 +1562,7 @@ body {
   bottom: 4rem;
   left: 3rem;
   z-index: 20;
-  transition: opacity 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 .go-to-top-btn button {
   display: flex;
