@@ -2,7 +2,7 @@
 
 const introAnis = document.querySelectorAll(".intro-bottom-wrap h4");
 
-const addObserver = (introAni) => {
+const introObserver = (introAni) => {
   const options = { root: null, threshold: 0.3, rootMargin: "0px 0px" };
   const test = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -16,5 +16,5 @@ const addObserver = (introAni) => {
   test.observe(introAni);
 };
 introAnis.forEach((introAni) => {
-  addObserver(introAni);
+  introObserver(introAni);
 });
