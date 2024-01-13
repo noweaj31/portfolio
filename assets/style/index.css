@@ -796,7 +796,6 @@ body {
 .project-wrap .project-area .project-img .text-wrap {
   font-size: 1.8rem;
   margin-top: 1.5rem;
-  opacity: 0;
   transition: 0.3s ease;
   z-index: 10 !important;
 }
@@ -894,10 +893,6 @@ body {
 .project-box .img-wrap:hover {
   box-shadow: 0.5rem 0.5rem #ff94b1;
 }
-.netflix .project-box:hover > .text-wrap {
-  opacity: 1;
-  transition: 0.3s ease;
-}
 
 .netflix img {
   transform: scale(1);
@@ -930,10 +925,6 @@ body {
   background-position: bottom;
 }
 
-.ohouse .project-box:hover > .text-wrap {
-  opacity: 1;
-  transition: 0.3s ease;
-}
 .ohouse img {
   transform: scale(1);
   transition: 0.3s ease;
@@ -942,7 +933,7 @@ body {
 .project-wrap .project-area .project-img .project-mid {
   display: flex;
   justify-content: center;
-  margin-top: 9rem;
+  margin-top: 1rem;
 }
 .project-wrap .project-area .project-img .project-mid .padding {
   flex: 0 0 auto;
@@ -975,10 +966,7 @@ body {
 .millet .project-box .img-wrap:hover {
   background-position: bottom;
 }
-.millet .project-box:hover > .text-wrap {
-  opacity: 1;
-  transition: 0.3s ease;
-}
+
 .millet img {
   transform: scale(1);
   transition: 0.3s ease;
@@ -1017,12 +1005,8 @@ body {
   height: auto;
 }
 
-.iqos .project-box:hover > .text-wrap {
-  opacity: 1;
-  transition: 0.3s ease;
-}
 .project-wrap .project-area .project-img .project-bottom {
-  margin-top: 9rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
 }
@@ -1060,10 +1044,6 @@ body {
 }
 .tamburins .project-box .img-wrap:hover {
   background-position: bottom;
-}
-.tamburins .project-box:hover > .text-wrap {
-  opacity: 1;
-  transition: 0.3s ease;
 }
 
 @media screen and (max-width: 767px) {
