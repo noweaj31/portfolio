@@ -5,7 +5,7 @@ const profile = document.querySelector(".about-wrap .profile");
 const aboutText = document.querySelector(".about-wrap .about-text");
 const carousel = document.querySelector(".img-slider-carousel");
 
-const options = { root: null, threshold: 0.3, rootMargin: "0px 0px" };
+const options = { root: null, threshold: 0.3, rootMargin: "0px -100px" };
 const aboutWrap = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false

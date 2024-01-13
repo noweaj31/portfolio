@@ -32,62 +32,126 @@ const participationTextWrap = new IntersectionObserver((entries) => {
 
 participationTextWrap.observe(participationText);
 
-const netflixWrap = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
-    console.log("Intersection ratio: ", entry.intersectionRatio);
-    if (entry.intersectionRatio > 0.1) {
-      netflix.setAttribute("data-ani-fade-in", "play");
-    }
-  });
-}, options);
+// const netflixWrap = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
+//     console.log("Intersection ratio: ", entry.intersectionRatio);
+//     if (entry.intersectionRatio > 0.1) {
+//       netflix.setAttribute("data-ani-fade-in", "play");
+//     }
+//   });
+// }, options);
 
-netflixWrap.observe(netflix);
+// netflixWrap.observe(netflix);
+const netflixObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
 
-const ohouseWrap = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
-    console.log("Intersection ratio: ", entry.intersectionRatio);
-    if (entry.intersectionRatio > 0.1) {
-      ohouse.setAttribute("data-ani-fade-in", "play");
-    }
-  });
-}, options);
+netflixObserver.observe(netflix);
 
-ohouseWrap.observe(ohouse);
+const ohouseObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
 
-const milletWrap = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
-    console.log("Intersection ratio: ", entry.intersectionRatio);
-    if (entry.intersectionRatio > 0.1) {
-      millet.setAttribute("data-ani-fade-in", "play");
-    }
-  });
-}, options);
+ohouseObserver.observe(ohouse);
 
-milletWrap.observe(millet);
+// const ohouseWrap = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
+//     console.log("Intersection ratio: ", entry.intersectionRatio);
+//     if (entry.intersectionRatio > 0.1) {
+//       ohouse.setAttribute("data-ani-fade-in", "play");
+//     }
+//   });
+// }, options);
 
-const iqosWrap = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
-    console.log("Intersection ratio: ", entry.intersectionRatio);
-    if (entry.intersectionRatio > 0.1) {
-      iqos.setAttribute("data-ani-fade-in", "play");
-    }
-  });
-}, options);
+// ohouseWrap.observe(ohouse);
 
-iqosWrap.observe(iqos);
+// const milletWrap = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
+//     console.log("Intersection ratio: ", entry.intersectionRatio);
+//     if (entry.intersectionRatio > 0.1) {
+//       millet.setAttribute("data-ani-fade-in", "play");
+//     }
+//   });
+// }, options);
 
-const tamburinsWrap = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
-    console.log("Intersection ratio: ", entry.intersectionRatio);
-    if (entry.intersectionRatio > 0.1) {
-      tamburins.setAttribute("data-ani-fade-in", "play");
-    }
-  });
-}, options);
+// milletWrap.observe(millet);
 
-tamburinsWrap.observe(tamburins);
+const milletObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+milletObserver.observe(millet);
+
+// const iqosWrap = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
+//     console.log("Intersection ratio: ", entry.intersectionRatio);
+//     if (entry.intersectionRatio > 0.1) {
+//       iqos.setAttribute("data-ani-fade-in", "play");
+//     }
+//   });
+// }, options);
+
+// iqosWrap.observe(iqos);
+
+const iqosObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+iqosObserver.observe(iqos);
+
+// const tamburinsWrap = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
+//     console.log("Intersection ratio: ", entry.intersectionRatio);
+//     if (entry.intersectionRatio > 0.1) {
+//       tamburins.setAttribute("data-ani-fade-in", "play");
+//     }
+//   });
+// }, options);
+
+// tamburinsWrap.observe(tamburins);
+
+const tamburinsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+tamburinsObserver.observe(tamburins);

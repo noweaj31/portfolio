@@ -870,6 +870,13 @@ body {
   flex: 0 0 auto;
   width: 27%;
   margin-left: 7rem;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 300ms;
+}
+.netflix.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .netflix .project-box .img-wrap {
   width: 100%;
@@ -900,6 +907,13 @@ body {
   flex: 0 0 auto;
   width: 50%;
   margin-left: 7rem;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 800ms;
+}
+.ohouse.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .ohouse .project-box .img-wrap {
   width: 100%;
@@ -940,6 +954,13 @@ body {
   display: flex;
   align-items: center;
   margin-left: 9rem;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 300ms;
+}
+.millet.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .millet .project-box .img-wrap {
   width: 100%;
@@ -969,6 +990,13 @@ body {
   flex: 0 0 auto;
   width: 33.3%;
   margin-left: 8rem;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 800ms;
+}
+.iqos.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .iqos .project-box .img-wrap {
   width: 100%;
@@ -1001,6 +1029,13 @@ body {
 .tamburins {
   width: 50%;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 300ms;
+}
+.tamburins.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .tamburins .project-box {
   width: 100%;
