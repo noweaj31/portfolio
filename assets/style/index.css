@@ -29,7 +29,7 @@ body {
   transition: transform 300ms ease-in-out;
 }
 .head-wrap .logo-wrap img:hover {
-  transform: rotate(359deg);
+  opacity: 0.5;
 }
 .head-wrap .right-menu {
   display: flex;
