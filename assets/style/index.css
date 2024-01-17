@@ -315,6 +315,13 @@ body {
   width: 36rem;
   min-width: 36rem;
   height: 100%;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 500ms;
+}
+.about-wrap .about-area .img-slider-carousel.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .about-wrap .about-area .img-slider-carousel .img-slider {
   width: 100%;
@@ -410,6 +417,13 @@ body {
   word-break: keep-all;
   line-height: normal;
   margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 500ms;
+}
+.about-wrap .about-area .intro .about.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .about-wrap .about-area .intro .about span {
   color: #f77171;
@@ -418,6 +432,13 @@ body {
   margin-top: 2.3rem;
   font-size: clamp(1.6rem, 1.4vw, 1.8rem);
   color: #ddd;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 700ms;
+}
+.about-wrap .about-area .intro .about-text.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .about-wrap .about-area .intro .about-text span {
   color: #f77171;
@@ -426,6 +447,13 @@ body {
 .about-wrap .about-area .intro .profile {
   margin-top: 2.3rem;
   margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 600ms;
+}
+.about-wrap .about-area .intro .profile.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .about-wrap .about-area .intro .profile-list {
   font-size: 1.8rem;
