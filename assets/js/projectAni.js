@@ -1,6 +1,6 @@
 "use strict";
 
-const participation = document.querySelector(".project-wrap .info-area h3");
+// const participation = document.querySelector(".project-wrap .info-area h3");
 const participationText = document.querySelector(".project-wrap .info-area p");
 const netflix = document.querySelector(".netflix");
 const ohouse = document.querySelector(".ohouse");
@@ -8,17 +8,17 @@ const millet = document.querySelector(".millet");
 const iqos = document.querySelector(".iqos");
 const tamburins = document.querySelector(".tamburins");
 
-const participationWrap = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
-    console.log("Intersection ratio: ", entry.intersectionRatio);
-    if (entry.intersectionRatio > 0.1) {
-      participation.setAttribute("data-ani-fade-in", "play");
-    }
-  });
-}, options);
+// const participationWrap = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry.isIntersecting); //화면에 보이면 true, 아니면 false
+//     console.log("Intersection ratio: ", entry.intersectionRatio);
+//     if (entry.intersectionRatio > 0.1) {
+//       participation.setAttribute("data-ani-fade-in", "play");
+//     }
+//   });
+// }, options);
 
-participationWrap.observe(participation);
+// participationWrap.observe(participation);
 
 const participationTextWrap = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

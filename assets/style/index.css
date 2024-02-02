@@ -810,6 +810,16 @@ body {
   font-weight: 600;
   line-height: 1rem;
   color: #ffbecf;
+  animation: motion 0.3s linear 0s infinite alternate;
+}
+
+@keyframes motion {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1rem);
+  }
 }
 
 .project-wrap .project-area .text-area .info-area p {
