@@ -137,47 +137,109 @@ body {
 }
 .intro-wrap .intro-area .ani-text {
   display: flex;
-  justify-content: center;
+  height: 60%;
   width: 100%;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
-  color: #000;
-  gap: 2rem;
+  top: 20%;
+  left: 0;
+  padding: 0 3rem;
 }
-.intro-wrap .intro-area .ani-text h2 {
-  line-height: normal;
+.intro-wrap .intro-area .ani-text .main {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
-.intro-wrap .intro-area .ani-text h2:nth-of-type(3) {
-  color: #f7c749;
+.intro-wrap .intro-area .ani-text .main .iw {
+  width: 30%;
+}
+.intro-wrap .intro-area .ani-text .main div {
+  width: 100%;
+  height: 100%;
+}
+.intro-wrap .intro-area .ani-text .main div svg {
+  height: 100%;
+  animation: mainScaler;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.66, -0.01, 0.43, 1.01);
+}
+.intro-wrap .intro-area .ani-text .main .group-1 svg {
+  animation-name: mainScaler_largest;
+  animation-duration: 3.4s;
+}
+.intro-wrap .intro-area .ani-text .main .group-2 svg {
+  animation-name: mainScaler_larger;
+  animation-duration: 4s;
+}
+.intro-wrap .intro-area .ani-text .main .group-4 svg {
+  animation-name: mainScaler_small;
+  animation-duration: 3.5s;
+}
+.intro-wrap .intro-area .ani-text .main .group-5 svg {
+  animation-name: mainScaler_normal;
+  animation-duration: 3.6s;
+}
+@keyframes mainScaler_small {
+  0% {
+    height: 30%;
+  }
+  100% {
+    height: 35%;
+  }
+}
+@keyframes mainScaler_normal {
+  0% {
+    height: 30%;
+  }
+  100% {
+    height: 41%;
+  }
+}
+@keyframes mainScaler {
+  0% {
+    height: 30%;
+  }
+  100% {
+    height: 52%;
+  }
+}
+@keyframes mainScaler_larger {
+  0% {
+    height: 30%;
+  }
+  100% {
+    height: 75%;
+  }
+}
+@keyframes mainScaler_largest {
+  0% {
+    height: 30%;
+  }
+  100% {
+    height: 100%;
+  }
 }
 .intro-wrap .intro-area .arrow-btn {
   display: flex;
   align-items: center;
   flex-direction: column;
   position: absolute;
-  bottom: 4rem;
+  bottom: 20rem;
   left: 50%;
   transform: translateX(-50%);
   transition: 0.3s;
+  animation: motion 0.3s linear 0s infinite alternate;
 }
-.intro-wrap .intro-area .arrow-btn span {
-  color: #000;
-}
+
 .intro-wrap button {
   width: 6rem;
   height: 6rem;
   border: 2px solid #000;
   border-radius: 50%;
 }
-.intro-wrap .arrow-btn:hover {
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transition: 0.3s;
-}
+
 .intro-wrap button i {
   color: #000;
   font-size: 3rem;
@@ -192,7 +254,7 @@ body {
     padding: 0 3rem;
   }
   .intro-wrap .intro-area .arrow-btn {
-    bottom: 10rem;
+    bottom: 20rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -206,7 +268,12 @@ body {
 }
 /* intro-bottom-wrap */
 .intro-bottom-wrap {
-  padding: 9rem 3rem;
+  padding: 5rem 3rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  color: #000;
 }
 
 .intro-bottom-wrap h4 {
@@ -263,6 +330,7 @@ body {
 @media screen and (max-width: 767px) {
   .intro-bottom-wrap {
     padding: 4rem 1rem;
+    bottom: 3rem;
   }
   .intro-bottom-wrap p {
     font-size: 2.4rem;
@@ -1550,6 +1618,8 @@ body {
   display: none;
 }
 @media screen and (max-width: 767px) {
+}
+@media screen and (max-width: 480px) {
   .btn-wrap {
     display: none;
   }
@@ -1560,7 +1630,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 30;
-    height: 7rem;
+    height: 5rem;
     box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #20202073;
     transition: all 300ms;
     background-color: #202020;
@@ -1581,7 +1651,7 @@ body {
     opacity: 0.5;
   }
   .bottom-wrap .study-btn-wrap button img {
-    height: 7rem;
+    height: 5rem;
   }
   .velog-ic {
     background-color: #20c997;
@@ -1596,14 +1666,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-}
-@media screen and (max-width: 480px) {
-  .bottom-wrap {
-    height: 5rem;
-  }
-  .bottom-wrap .study-btn-wrap button img {
-    height: 5rem;
   }
 }
 /* go-to-top-btn */
