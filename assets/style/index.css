@@ -1,5 +1,7 @@
 @charset 'UTF-8';
-
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #fff;
 }
@@ -216,6 +218,65 @@ body {
     height: 100%;
   }
 }
+
+.line-drawing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.line-drawing span:nth-of-type(1) {
+  top: 20%;
+  left: 0;
+  z-index: -1;
+}
+.line-drawing span:nth-of-type(2) {
+  top: 35%;
+  right: 0;
+  z-index: 1;
+  animation-name: line-reverse;
+  animation-duration: 3.4s;
+}
+.line-drawing span:nth-of-type(3) {
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  animation-name: line;
+  animation-duration: 4s;
+}
+.line-drawing span {
+  position: absolute;
+
+  width: 100%;
+  height: 1rem;
+  background-color: #f7c749;
+  animation: line;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.66, -0.01, 0.43, 1.01);
+}
+.line-drawing svg line {
+  width: 100%;
+}
+@keyframes line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes line-reverse {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
 .intro-wrap .intro-area .arrow-btn {
   position: absolute;
   bottom: 20rem;
@@ -224,6 +285,7 @@ body {
   transform: translate(-50%, -50%);
   transition: 0.3s;
   animation: arrow 0.3s linear 0s infinite alternate;
+  z-index: 3;
 }
 @keyframes arrow {
   0% {
@@ -551,9 +613,35 @@ body {
   position: absolute;
   top: 5rem;
   font-size: 10rem;
-  right: 8rem;
+  right: 7rem;
   color: #f77171;
-  opacity: 0.4;
+  width: 21rem;
+}
+.about-wrap .about-wrap-title span {
+  display: inline-block;
+  margin: 0 -1rem;
+  animation: loading 1.4s infinite alternate;
+}
+.about-wrap .about-wrap-title span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.about-wrap .about-wrap-title span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.about-wrap .about-wrap-title span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.about-wrap .about-wrap-title span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @media screen and (max-width: 1023px) {
   .about-wrap {
@@ -640,9 +728,26 @@ body {
   position: absolute;
   top: 5rem;
   font-size: 10rem;
-  right: 8rem;
+  right: 7rem;
   color: #35af60;
-  opacity: 0.4;
+  width: 21rem;
+}
+.technical-stack-wrap .technical-stack-wrap-title span {
+  display: inline-block;
+  margin: 0 -1rem;
+  animation: loading 1.4s infinite alternate;
+}
+.technical-stack-wrap .technical-stack-wrap-title span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.technical-stack-wrap .technical-stack-wrap-title span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.technical-stack-wrap .technical-stack-wrap-title span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.technical-stack-wrap .technical-stack-wrap-title span:nth-child(5) {
+  animation-delay: 0.4s;
 }
 .technical-stack-wrap .technical-stack-area {
   display: flex;
@@ -864,9 +969,32 @@ body {
   position: absolute;
   top: 5rem;
   font-size: 10rem;
-  right: 8rem;
-  color: #f77171;
-  opacity: 0.4;
+  right: 7rem;
+  color: #ffbecf;
+  width: 27rem;
+}
+.project-wrap .project-wrap-title span {
+  display: inline-block;
+  margin: 0 -1rem;
+  animation: loading 1.4s infinite alternate;
+}
+.project-wrap .project-wrap-title span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.project-wrap .project-wrap-title span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.project-wrap .project-wrap-title span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.project-wrap .project-wrap-title span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.project-wrap .project-wrap-title span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.project-wrap .project-wrap-title span:nth-child(7) {
+  animation-delay: 0.6s;
 }
 .project-wrap .project-area {
   display: flex;
@@ -1330,6 +1458,32 @@ body {
   font-family: "iceJaram-Rg";
   font-size: 13rem;
   line-height: normal;
+  color: #f7c749;
+}
+.contact-container .contact-header h1 span {
+  display: inline-block;
+  animation: wave 0.7s infinite;
+}
+.contact-container .contact-header h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.contact-container .contact-header h1 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.contact-container .contact-header h1 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.contact-container .contact-header h1 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
 }
 .contact-container .contact-header .contact-form-btn-wrap {
   display: flex;
