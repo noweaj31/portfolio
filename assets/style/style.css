@@ -4,10 +4,10 @@
   appearance: none;
 }
 
-.check_input:checked {
-  
+.check_input:checked::after {
+  content: "";
 }
 
-.check_input:checked::after {
-  content:'';
+body {
+  margin: 0;
 }
