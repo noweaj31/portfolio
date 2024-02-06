@@ -2,6 +2,7 @@
 
 body {
   font-family: "Pretendard-Regular";
+  overflow-x: hidden;
 }
 *:not(font, i, b) {
   margin: 0;
