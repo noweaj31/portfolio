@@ -4,7 +4,7 @@ const hello = document.querySelector(".contact-header h1");
 const contactBtn = document.querySelector(".contact-form-btn-wrap");
 const greeting = document.querySelector(".greeting-text");
 const mail = document.querySelector(".contact-main-wrap a");
-const lastText = document.querySelector(".contact-main-wrap .time");
+const lastText = document.querySelector(".contact-main-wrap .last-text");
 
 const helloWrap = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
