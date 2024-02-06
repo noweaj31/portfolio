@@ -37,16 +37,38 @@ body {
   display: flex;
   align-items: center;
 }
-.head-wrap .right-menu .time {
-  width: 23rem;
-  margin-top: 0.4rem;
-  margin-right: 2rem;
+.head-wrap .right-menu .link-list {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   font-weight: 600;
+  gap: 2rem;
+  margin-right: 4rem;
 }
-.head-wrap .right-menu .time span {
-  font-weight: 700;
+.head-wrap .right-menu .link-list a {
+  position: relative;
+  padding-bottom: 0.5rem;
 }
+.head-wrap .right-menu .link-list a:hover {
+  color: #f7c749;
+}
+.head-wrap .right-menu .link-list a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.2s, opacity 0.2s;
+  background-color: #f7c749;
+}
+.head-wrap .right-menu .link-list a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
 .head-wrap .right-menu .gnb-btn {
   height: 2rem;
   width: 3rem;
@@ -56,7 +78,7 @@ body {
   z-index: 30;
 }
 .head-wrap .right-menu .gnb-btn.is-active span {
-  background: #ccc;
+  background: #202020;
 }
 .head-wrap .right-menu .gnb-btn.is-active span:nth-of-type(1) {
   position: absolute;
@@ -124,26 +146,30 @@ body {
   .head-wrap .right-menu .gnb-btn span {
     height: 0.3rem;
   }
+  .head-wrap .right-menu .link-list {
+    display: none;
+  }
 }
 /* intro-wrap */
 .intro-wrap {
   height: 100vh;
   color: #fff;
   font-size: 2rem;
+  background-color: #f7c749;
 }
 .intro-wrap .intro-area {
   position: relative;
-
   height: 100%;
 }
 
 .intro-wrap .intro-area .main {
   display: flex;
+  width: 50%;
   height: 75%;
-
   position: absolute;
   top: 17%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 0 3rem;
 }
 .intro-wrap .intro-area .main .iw {
@@ -219,7 +245,7 @@ body {
   }
 }
 
-.line-drawing {
+/* .line-drawing {
   position: absolute;
   top: 0;
   left: 0;
@@ -260,8 +286,8 @@ body {
 }
 .line-drawing svg line {
   width: 100%;
-}
-@keyframes line {
+} */
+/* @keyframes line {
   0% {
     width: 0%;
   }
@@ -276,48 +302,57 @@ body {
   100% {
     width: 0%;
   }
+} */
+.intro-wrap .time {
+  position: fixed;
+  bottom: 4rem;
+  right: 3rem;
+  background-color: transparent;
+  mix-blend-mode: difference;
+  color: #e6e6e6b5;
+  font-size: 2.5rem;
+  z-index: 40;
 }
 .intro-wrap .intro-area .arrow-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   bottom: 20rem;
-  top: 70%;
+  bottom: 5rem;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.3s;
-  animation: arrow 0.3s linear 0s infinite alternate;
   z-index: 3;
 }
-@keyframes arrow {
-  0% {
-    padding: 0;
-  }
-  100% {
-    padding: 1rem;
-  }
+.intro-wrap .intro-area .arrow-btn:hover {
+  padding-bottom: 1rem;
 }
 .intro-wrap button {
   width: 6rem;
-  height: 6rem;
-  border: 2px solid #000;
+  height: 100%;
+
   border-radius: 50%;
 }
-
-.intro-wrap button i {
-  color: #000;
-  font-size: 3rem;
+.intro-wrap button svg {
+  height: 100%;
 }
-
+.intro-wrap .intro-area .arrow-btn span {
+  color: #202020;
+}
 @media screen and (max-width: 721px) {
   .intro-wrap .intro-area .main {
     height: 60%;
   }
-  .intro-wrap .intro-area .arrow-btn {
-    bottom: 20rem;
+
+  .intro-wrap .time {
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {
   .intro-wrap .intro-area .main {
     top: 10%;
+    width: 100%;
     height: 75%;
   }
   .intro-wrap button {
@@ -333,15 +368,17 @@ body {
   padding: 5rem 3rem;
   position: absolute;
   width: 100%;
-  bottom: 0;
-  color: #000;
+  top: 50%;
+  background-color: transparent;
+  mix-blend-mode: difference;
+  color: #f7c64969;
 }
 
 .intro-bottom-wrap h4 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
   text-align: center;
-  line-height: 4.6rem;
+  line-height: 3rem;
   word-break: keep-all;
 }
 [data-ani-fade-in] {
@@ -1672,10 +1709,13 @@ body {
 .contact-main .contact-main-wrap a:hover::before {
   width: 100%;
 }
-.contact-main .contact-main-wrap .last-text {
+
+.contact-main .last-text {
   font-size: 1.8rem;
   margin-top: 2rem;
+  font-weight: 500;
 }
+
 @media screen and (max-width: 849px) {
   .contact-container .contact-header {
     flex-direction: column;
@@ -1739,96 +1779,7 @@ body {
     display: block;
   }
 }
-/* btn-wrap */
-.btn-wrap {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  bottom: 4rem;
-  right: 3rem;
-  z-index: 20;
-}
 
-.btn-wrap .study-btn {
-  display: flex;
-  flex-direction: column;
-}
-.btn-wrap .study-btn button + button {
-  margin-top: 2rem;
-}
-.btn-wrap .study-btn button {
-  color: #fff;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-  overflow: hidden;
-  box-shadow: 0px 2px 6px rgba(141, 139, 139, 0.334);
-  transition: opacity 300ms ease-in-out;
-}
-.btn-wrap .study-btn button:hover {
-  opacity: 0.7;
-}
-.btn-wrap .study-btn .github-logo img {
-  transform: scale(1.5);
-}
-.btn-wrap .study-btn .notion-logo img {
-  transform: scale(1.1);
-}
-.bottom-wrap {
-  display: none;
-}
-@media screen and (max-width: 767px) {
-}
-@media screen and (max-width: 480px) {
-  .btn-wrap {
-    display: none;
-  }
-  .bottom-wrap {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 30;
-    height: 5rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #20202073;
-    transition: all 300ms;
-    background-color: #202020;
-  }
-  .bottom-wrap .study-btn-wrap {
-    display: flex;
-    width: 100%;
-  }
-  .bottom-wrap .study-btn-wrap button {
-    width: 33.333%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 300ms ease-in-out;
-  }
-  .bottom-wrap .study-btn-wrap button:hover {
-    opacity: 0.5;
-  }
-  .bottom-wrap .study-btn-wrap button img {
-    height: 5rem;
-  }
-  .velog-ic {
-    background-color: #20c997;
-  }
-  .github-ic {
-    background-color: #1b1f23;
-  }
-  .notion-ic {
-    background-color: #fff;
-  }
-  .bottom-wrap .study-btn-wrap button a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 /* go-to-top-btn */
 .go-to-top-btn {
   position: fixed;
@@ -1855,12 +1806,12 @@ body {
 }
 @media screen and (max-width: 767px) {
   .go-to-top-btn {
-    bottom: 9rem;
+    bottom: 4rem;
   }
 }
 @media screen and (max-width: 480px) {
   .go-to-top-btn {
-    bottom: 7rem;
+    bottom: 3rem;
   }
   .go-to-top-btn button {
     width: 4rem;

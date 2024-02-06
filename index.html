@@ -27,11 +27,22 @@
           </h1>
         </a>
         <div class="right-menu">
-          <p id="clock" class="time">
-            <span class="year"></span><span class="month"></span>
-            <span class="date"></span><span class="hours"></span>
-            <span class="minutes"></span><span class="seconds"></span>
-          </p>
+          <ul class="link-list">
+            <li class="velog">
+              <a href=" https://velog.io/@noweaj31" target="_blank">Velog</a>
+            </li>
+            <li class="github">
+              <a href="https://github.com/noweaj31" target="_blank">Github</a>
+            </li>
+            <li class="notion">
+              <a
+                href=" https://www.notion.so/Web-Publisher-00902b9b8c2242319f69d269b88691ea?pvs=4"
+                target="_blank"
+                >Notion</a
+              >
+            </li>
+          </ul>
+
           <button class="gnb-btn">
             <span></span>
             <span></span>
@@ -264,16 +275,44 @@
               </svg>
             </div>
           </div>
-          <div class="arrow-btn" aria-labelledby="about">
-            <button><i class="fa-solid fa-arrow-down"></i></button>
-          </div>
-          <div class="intro-bottom-wrap">
-            <h4 data-ani-delay="600">
+          <!-- <div class="intro-bottom-wrap">
+            <h4 data-ani-delay="600" data-ani-fade-in="play">
               웹 표준과 웹 접근성, 최신 트렌드를 고려해서 마크업을 하며,
             </h4>
-            <h4 data-ani-delay="700">
+            <h4 data-ani-delay="700" data-ani-fade-in="play">
               스크립트를 이용해서 발전해 나아가는 퍼블리셔가 되겠습니다.
             </h4>
+          </div> -->
+          <p id="clock" class="time" data-ani-delay="700">
+            <span class="year"></span><span class="month"></span>
+            <span class="date"></span><span class="hours"></span>
+            <span class="minutes"></span><span class="seconds"></span>
+          </p>
+          <div class="arrow-btn" aria-labelledby="about">
+            <button>
+              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+              <svg
+                version="1.0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="60.000000pt"
+                height="60.000000pt"
+                viewBox="0 0 1000.000000 1000.000000"
+                preserveAspectRatio="none"
+              >
+                <g
+                  transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
+                  fill="#000000"
+                  stroke="none"
+                >
+                  <path
+                    d="M4910 5565 l0 -3095 -274 -2 -273 -3 321 -557 c191 -332 323 -552
+              328 -545 4 7 148 257 321 557 l314 545 -283 3 -284 2 0 3095 0 3095 -85 0 -85
+              0 0 -3095z"
+                  />
+                </g>
+              </svg>
+              <span>click</span>
+            </button>
           </div>
         </div>
       </section>
@@ -341,8 +380,8 @@
           </div>
           <div class="intro">
             <h2 class="about">
-              안녕하세요.<br />더 높이 올라가겠습니다.<br />웹 퍼블리셔
-              이재원입니다.
+              안녕하세요.<br />
+              퍼블리셔 이재원입니다.
             </h2>
             <div class="profile">
               <ul class="profile-list">
@@ -377,7 +416,8 @@
               누구나 편하고 쉽게 사용할 수 있게끔 만들기 위해
               <span>꾸준히 공부하여 웹 접근성과 웹 표준 준수</span>를 통해 어떤
               환경에서도 원활한 이용 경험을 제공하여 서비스 사용자들의 만족도를
-              높이도록 하겠습니다. <br /><br />
+              높이고 스크립트를 이용해서 발전해 나아가는 퍼블리셔가 되겠습니다.
+              <br /><br />
               포트폴리오에 방문해 주셔서 감사합니다.
             </p>
           </div>
@@ -850,7 +890,7 @@
           <a href="mailTo:noweajeel31@gmail.com" data-ani-delay="500">
             <span>noweajeel31@gmail.com</span>
           </a>
-          <p class="last-text" data-ani-delay="700">
+          <p class="last-text" data-ani-delay="700" data-ani-fade-in="play">
             메일을 보내주시면 확인 후 최대한 빠르게 회신 드리겠습니다🫶
           </p>
         </div>
@@ -883,52 +923,9 @@
         <p class="copyright">© 2023 LEE JAE-WON All Rights Reserved.</p>
       </div>
     </footer>
-    <div class="btn-wrap">
-      <div class="study-btn">
-        <button class="velog-logo">
-          <a href="https://velog.io/@noweaj31" target="_blank"
-            ><img src="./assets/image/velog.png" alt="벨로그 버튼"
-          /></a>
-        </button>
-        <button class="github-logo">
-          <a href="https://github.com/noweaj31" target="_blank"
-            ><img src="./assets/image/github.webp" alt="깃허브 버튼"
-          /></a>
-        </button>
-        <button class="notion-logo">
-          <a
-            href="https://www.notion.so/Web-Publisher-00902b9b8c2242319f69d269b88691ea?pvs=4"
-            target="_blank"
-          >
-            <img src="./assets/image/notion.png" alt="노션 버튼" />
-          </a>
-        </button>
-      </div>
-    </div>
+
     <div class="go-to-top-btn">
       <button><i class="fa-solid fa-arrow-up"></i></button>
-    </div>
-    <div class="bottom-wrap">
-      <div class="study-btn-wrap">
-        <button class="velog-ic">
-          <a href="https://velog.io/@noweaj31" target="_blank"
-            ><img src="./assets/image/velog.png" alt="벨로그 버튼"
-          /></a>
-        </button>
-        <button class="github-ic">
-          <a href="https://github.com/noweaj31" target="_blank"
-            ><img src="./assets/image/github.webp" alt="깃허브 버튼"
-          /></a>
-        </button>
-        <button class="notion-ic">
-          <a
-            href="https://www.notion.so/Web-Publisher-00902b9b8c2242319f69d269b88691ea?pvs=4"
-            target="_blank"
-          >
-            <img src="./assets/image/notion.png" alt="노션 버튼" />
-          </a>
-        </button>
-      </div>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
