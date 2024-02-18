@@ -162,6 +162,25 @@ body {
   height: 100%;
 }
 
+.intro-wrap .intro-area .intro-text {
+  font-family: "PyeongChangPeace-Bold";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 9rem;
+  z-index: 1;
+  animation: fadeIn;
+}
+.intro-wrap .intro-area .intro-text .name {
+  color: #202020;
+  font-size: 10rem;
+}
 .intro-wrap .intro-area .main {
   display: flex;
   width: 50%;
@@ -171,6 +190,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   padding: 0 3rem;
+  opacity: 0.1;
 }
 .intro-wrap .intro-area .main .iw {
   width: 30%;
@@ -245,64 +265,6 @@ body {
   }
 }
 
-/* .line-drawing {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.line-drawing span:nth-of-type(1) {
-  top: 20%;
-  left: 0;
-  z-index: -1;
-}
-.line-drawing span:nth-of-type(2) {
-  top: 35%;
-  right: 0;
-  z-index: 1;
-  animation-name: line-reverse;
-  animation-duration: 3.4s;
-}
-.line-drawing span:nth-of-type(3) {
-  top: 50%;
-  left: 0;
-  z-index: -1;
-  animation-name: line;
-  animation-duration: 4s;
-}
-.line-drawing span {
-  position: absolute;
-
-  width: 100%;
-  height: 1rem;
-  background-color: #f7c749;
-  animation: line;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: cubic-bezier(0.66, -0.01, 0.43, 1.01);
-}
-.line-drawing svg line {
-  width: 100%;
-} */
-/* @keyframes line {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes line-reverse {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0%;
-  }
-} */
 .intro-wrap .time {
   position: fixed;
   bottom: 4rem;
@@ -414,12 +376,32 @@ body {
     opacity: 1;
   }
 }
+@media screen and (max-width: 1114px) {
+  .intro-wrap .intro-area .intro-text {
+    font-size: 8rem;
+  }
+  .intro-wrap .intro-area .intro-text .name {
+    font-size: 9rem;
+  }
+}
 @media screen and (max-width: 1023px) {
+  .intro-wrap .intro-area .intro-text {
+    font-size: 7rem;
+  }
+  .intro-wrap .intro-area .intro-text .name {
+    font-size: 8rem;
+  }
   .intro-bottom-wrap p {
     font-size: 2.9rem;
   }
 }
 @media screen and (max-width: 877px) {
+  .intro-wrap .intro-area .intro-text {
+    font-size: 5rem;
+  }
+  .intro-wrap .intro-area .intro-text .name {
+    font-size: 6rem;
+  }
   .intro-bottom-wrap h4 {
     font-size: 2.5rem;
     line-height: 3.8rem;
@@ -435,6 +417,14 @@ body {
     line-height: 3.5rem;
   }
 }
+@media screen and (max-width: 670px) {
+  .intro-wrap .intro-area .intro-text {
+    font-size: 3rem;
+  }
+  .intro-wrap .intro-area .intro-text .name {
+    font-size: 4rem;
+  }
+}
 @media screen and (max-width: 571px) {
   .intro-bottom-wrap h4 {
     font-size: 2rem;
@@ -448,6 +438,12 @@ body {
   }
 }
 @media screen and (max-width: 480px) {
+  .intro-wrap .intro-area .intro-text {
+    font-size: 3rem;
+  }
+  .intro-wrap .intro-area .intro-text .name {
+    font-size: 4rem;
+  }
   .intro-bottom-wrap {
     padding: 0 1rem 4rem;
   }
